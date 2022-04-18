@@ -20,7 +20,7 @@ class WebPage(models.Model):
 
 class AccessRecord(models.Model):
     name = models.ForeignKey('WebPage', on_delete=models.CASCADE)
-    date = models.DateField
+    date = models.DateField()
 
     def __str__(self):
         return str(self.date)
