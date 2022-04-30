@@ -13,6 +13,11 @@
     {% for student in school_detail.students.all %}
     <p>{{ student.name }} who is {{ student.age }} years old.</p>
     {% endfor %}
+
+</div>
+<div class="container">
+    <p><a class="btn btn-warning" href="{% url 'adv_cbv:update' pk=school_detail.pk %}">Update</a></p>
+    <p><a class="btn btn-danger" href="{% url 'adv_cbv:delete' pk=school_detail.pk %}">Delete</a></p>
 </div>
 
 {% endblock %}
